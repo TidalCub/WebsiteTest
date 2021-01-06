@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="style.css">
+	<title>Depend-Enable</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+		var slideIndex = 2;
+showSlides(slideIndex);
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+	</script>
+	<header>Depend-Enable</header>
+	<!-- Nav bar -->
+<div class="navbar">
+  <a href="#home">Home</a>
+  <a href="#About">About Us</a>
+  <a href="#Gallery">Gallery</a>
+  <a href="#Contact">Contact Us</a>
+  <a href="#" class="right">Social Media</a>
+</div>
+<!-- Sections for content. id div are simply sized div -->
+	<div id="One">Image
+		<button id="button">Abous Us</button>
+	</div>
+<!-- Flex container to respond to web size, will wrap under when the size is smaller than 300px -->
+	<div class="flex-container-Row">
+  		<div id="small">About us</div>
+ 		<div id="big">
+ 			<div class="container">
+
+			  <!-- Full-width images with number text -->
+			  <div class="mySlides">
+			    <div class="numbertext">1 / 6</div>
+			      <img src="Image.png" style="width:100%">
+			  </div>
+
+			  <div class="mySlides">
+			    <div class="numbertext">2 / 6</div>
+			      <img src="Image.png" style="width:100%">
+			  </div>
+
+			  <div class="mySlides">
+			    <div class="numbertext">3 / 6</div>
+			      <img src="Image.png" style="width:100%">
+			  </div>
+
+			  <div class="mySlides">
+			    <div class="numbertext">4 / 6</div>
+			      <img src="Image.png" style="width:100%">
+			  </div>
+
+			  <div class="mySlides">
+			    <div class="numbertext">5 / 6</div>
+			      <img src="Image.png" style="width:100%">
+			  </div>
+
+			  <div class="mySlides">
+			    <div class="numbertext">6 / 6</div>
+			      <img src="Image.png" style="width:100%">
+			  </div>
+
+			  <!-- Next and previous buttons -->
+			  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+			  <!-- Image text -->
+			  <div class="caption-container">
+			    <p id="caption"></p>
+			  </div>
+
+			  <!-- Thumbnail images -->
+			  <div class="row">
+			    <div class="column">
+			      <img class="demo cursor" src="Image.png" style="width:100%" onclick="currentSlide(1)" alt="Text Here">
+			    </div>
+			    <div class="column">
+			      <img class="demo cursor" src="Image.png" style="width:100%" onclick="currentSlide(2)" alt="Text Here">
+			    </div>
+			    <div class="column">
+			      <img class="demo cursor" src="Image.png" style="width:100%" onclick="currentSlide(3)" alt="Text Here">
+			    </div>
+			    <div class="column">
+			      <img class="demo cursor" src="Image.png" style="width:100%" onclick="currentSlide(4)" alt="Text Here">
+			    </div>
+			    <div class="column">
+			      <img class="demo cursor" src="Image.png" style="width:100%" onclick="currentSlide(5)" alt="Text Here">
+			    </div>
+			    <div class="column">
+			      <img class="demo cursor" src="Image.png" style="width:100%" onclick="currentSlide(6)" alt="Text Here">
+			    </div>
+			  </div>
+			</div>
+ 		</div>
+	</div>
+	<div class="flex-container-Row">
+		<div id="big1"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6280000.1759454375!2d23.38891833748194!3d-74.69301022534624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2suk!4v1609968546462!5m2!1sen!2suk" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
+		<div id="small1">
+			<h1>Contact us!</h1>
+			<h2>Email: Example@google.com </h2>
+			<h2>Phone: +44 7431846601</h2>
+			<p>We are avaliable from:</p>
+			<p>00:00 - 00:00</p>
+		</div>
+	</div>
+	<footer>This webpage and content found is protected against The Copyright, Designs and Patents Act, Copyright 2021©. <br />This wepage is designed and managed by Tidal Tec Solutions™ <br /> Depend-Enable 2021©  </footer>
+</body>
+</html>
