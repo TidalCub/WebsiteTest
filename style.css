@@ -63,7 +63,7 @@ header{
 .flex-container-Row > div {
   background-color: #f1f1f1;
   flex: 1;
-  min-width:300px;
+  min-width:360px;
   margin: 10px;
   padding:5px;
   text-align: center;
